@@ -292,3 +292,47 @@ h2{font-size:1.18rem;margin:0}.card{background:var(--panel);border:1px solid var
   font-weight: 700;
   color: var(--accent);
 }
+
+/* =========================================
+   PKCT Embedded Display Mode
+   Used with ?embed=1
+   ========================================= */
+
+.embed-mode .page-header {
+  display: none;
+}
+
+.embed-mode body {
+  background: transparent;
+  min-height: 0;
+}
+
+.embed-mode .container {
+  width: 100%;
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+.embed-mode .card {
+  box-shadow: none;
+  border-radius: 14px;
+}
+
+.embed-mode .weather-section {
+  margin-top: 1.5rem;
+}
+
+/* Mobile embedded layout */
+
+@media (max-width: 600px) {
+  .embed-mode .container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .embed-mode .card {
+    padding: 1rem;
+    border-radius: 12px;
+  }
+}
