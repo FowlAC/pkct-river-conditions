@@ -30,8 +30,8 @@ export async function onRequestGet() {
     for (const [name,code] of Object.entries(CODES)) {
       const readings = seriesReadings(series,code);
       result[name] = readings.length ? readings[readings.length - 1] : null;
-      // Limit payload size but keep full 24 hours of stage readings for a chart.
-      if (name === 'stage') result.stageHistory = readings.map(({value,dateTime}) => ({value,dateTime}));
+      // Include 24 hours of stage and signed mean-velocity readings for charts.
+      if (name === 'stage' || name === 'velocity') result[name+'History'] = readings.map(({value,dateTime}) => ({value,dateTime}));
     }
     if (!Object.values(CODES).some((_,i) => result[Object.keys(CODES)[i]])) {
       throw new Error('No recent measurements available for station 14211720');
