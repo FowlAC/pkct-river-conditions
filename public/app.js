@@ -107,3 +107,14 @@ document.addEventListener('visibilitychange', () => {
   }
 });
 
+// Embedded display mode for Squarespace
+// Activated by adding ?embed=1 to the dashboard URL
+
+(function enableEmbedMode() {
+  const params = new URLSearchParams(window.location.search);
+
+  if (params.get('embed') === '1') {
+    document.documentElement.classList.add('embed-mode');
+  }
+})();
+
