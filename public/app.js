@@ -60,19 +60,50 @@ async function loadConditions() {
 }
 document.addEventListener('DOMContentLoaded',loadConditions);
 
-// Refresh Sellwood River Camera every five minutes
+
+// Sellwood River Camera - automatic refresh
 
 const cameraEl = document.getElementById('river-camera');
 
+const cameraUrl =
+  'https://portlandrowingclub.com/wp-content/now.jpg';
+
+let cameraLoading = false;
+
 function refreshRiverCamera() {
-  if (!cameraEl) return;
+  if (!cameraEl || cameraLoading) return;
 
-  const imageUrl =
-    'https://portlandrowingclub.com/wp-content/now.jpg';
+  cameraLoading = true;
 
-  cameraEl.src = `${imageUrl}?t=${Date.now()}`;
+  // Request a fresh image instead of using browser cache
+  const freshUrl = `${cameraUrl}?refresh=${Date.now()}`;
+
+  const newImage = new Image();
+
+  newImage.onload = () => {
+    cameraEl.src = freshUrl;
+    cameraLoading = false;
+  };
+
+  newImage.onerror = () => {
+    // Keep the previous image if loading fails
+    cameraLoading = false;
+    console.warn('River camera refresh failed');
+  };
+
+  newImage.src = freshUrl;
 }
 
-if (cameraEl) {
-  setInterval(refreshRiverCamera, 5 * 60 * 1000);
-}
+// Refresh when the page opens
+refreshRiverCamera();
+
+// Refresh every two minutes
+setInterval(refreshRiverCamera, 2 * 60 * 1000);
+
+// Refresh when returning to the browser tab
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) {
+    refreshRiverCamera();
+  }
+});
+
