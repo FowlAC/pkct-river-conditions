@@ -111,3 +111,22 @@ h2{font-size:1.18rem;margin:0}.card{background:var(--panel);border:1px solid var
   }
 }
 
+/* Sellwood camera image */
+
+.camera-frame {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #eef3f7;
+}
+
+.camera-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
