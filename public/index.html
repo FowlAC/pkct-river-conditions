@@ -1,45 +1,58 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Willamette River Conditions</title>
+    <title>Willamette River Conditions | PKCT</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
+
   <body>
     <main class="container">
+
       <header class="page-header">
         <p class="eyebrow">PKCT</p>
         <h1>Willamette River Conditions</h1>
       </header>
 
       <section class="card">
+
         <div class="status-row">
           <span class="label">Status</span>
           <span id="status">Loading...</span>
         </div>
 
         <dl class="stats">
+
+          <!-- River Stage -->
           <div>
             <dt>Stage</dt>
             <dd id="stage">--</dd>
           </div>
+
+          <!-- River Discharge -->
           <div>
             <dt>Discharge</dt>
             <dd id="discharge">--</dd>
           </div>
-          
-<div class="metric">
-  <div class="metric-label">WATER TEMPERATURE</div>
-  <div class="metric-value" id="temperature">-- °F</div>
-</div>
 
-         <div>
+          <!-- Water Temperature -->
+          <div>
+            <dt>Water Temperature</dt>
+            <dd id="temperature">-- °F</dd>
+          </div>
+
+          <!-- Last Updated -->
+          <div>
             <dt>Updated</dt>
             <dd id="timestamp">--</dd>
           </div>
+
         </dl>
+
       </section>
+
     </main>
 
     <script src="/app.js"></script>
