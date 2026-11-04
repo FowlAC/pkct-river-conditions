@@ -59,3 +59,20 @@ async function loadConditions() {
   }
 }
 document.addEventListener('DOMContentLoaded',loadConditions);
+
+// Refresh Sellwood River Camera every five minutes
+
+const cameraEl = document.getElementById('river-camera');
+
+function refreshRiverCamera() {
+  if (!cameraEl) return;
+
+  const imageUrl =
+    'https://portlandrowingclub.com/wp-content/now.jpg';
+
+  cameraEl.src = `${imageUrl}?t=${Date.now()}`;
+}
+
+if (cameraEl) {
+  setInterval(refreshRiverCamera, 5 * 60 * 1000);
+}
