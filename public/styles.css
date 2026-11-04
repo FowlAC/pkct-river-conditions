@@ -203,3 +203,36 @@ h2{font-size:1.18rem;margin:0}.card{background:var(--panel);border:1px solid var
     font-size: 0.85rem;
   }
 }
+
+/* Clickable PKCT Logo */
+
+.logo-link {
+  display: inline-flex;
+  flex-shrink: 0;
+  max-width: 25%;
+  text-decoration: none;
+}
+
+.logo-link .site-logo {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: auto;
+}
+
+.logo-link:hover {
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.logo-link:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .logo-link .site-logo {
+    width: 90px;
+  }
+}
