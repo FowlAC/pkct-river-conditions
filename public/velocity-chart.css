@@ -1,0 +1,8 @@
+/* PKCT v4 velocity chart supplements existing .card and .chart styling. */
+.velocity-trend-card { margin-bottom: 1.3rem; }
+.velocity-trend-card .chart { min-height: 220px; }
+.velocity-trend-card .chart svg { display:block; width:100%; height:auto; }
+.velocity-trend-card .metric-note { margin-top: 0.75rem; }
+@media (max-width: 520px) {
+  .velocity-trend-card .chart { min-height: 130px; }
+}
