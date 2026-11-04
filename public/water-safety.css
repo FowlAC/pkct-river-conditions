@@ -1,0 +1,14 @@
+/* PKCT Water Safety v3: independent of existing dashboard styles */
+.water-safety-card { margin-top: 1.5rem; }
+.safety-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.safety-tile { min-width: 0; border: 1px solid #d4ebff; border-radius: 14px; padding: 1.35rem; background: #eaf6ff; }
+.safety-kicker { margin: 0 0 .85rem; font-size: .78rem; letter-spacing: .065em; color: #536170; font-weight: 600; }
+.safety-reading { margin: 0 0 .6rem; font-size: clamp(1.15rem, 2vw, 1.75rem); line-height: 1.2; font-weight: 700; overflow-wrap: anywhere; }
+.safety-alert { color: #9f2b21; }
+.safety-note { margin: 0 0 .8rem; color: #536170; font-size: .92rem; }
+.safety-explain { margin: 0 0 1rem; line-height: 1.5; font-size: .9rem; color: #536170; }
+.safety-tile a { font-weight: 700; color: #146b9d; }
+.safety-tile a:hover { text-decoration: none; }
+.safety-disclaimer { margin: 1rem 0 0; font-size: .85rem; line-height: 1.5; color: #536170; }
+.safety-checked { font-size: .85rem; color: #536170; }
+@media (max-width: 700px) { .safety-grid { grid-template-columns: 1fr; } .safety-tile { padding: 1rem; } }
