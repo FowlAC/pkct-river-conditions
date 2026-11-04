@@ -267,3 +267,28 @@ h2{font-size:1.18rem;margin:0}.card{background:var(--panel);border:1px solid var
     width: 100%;
   }
 }
+
+/* Compact Weather Card */
+
+.weather-summary {
+  background: var(--accent-soft);
+  border: 1px solid #d4ebff;
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.weather-summary h3 {
+  margin: 0 0 0.75rem;
+}
+
+.weather-summary p {
+  margin: 0 0 1rem;
+  max-width: 650px;
+}
+
+.weather-summary .weather-link {
+  display: inline-block;
+  margin-top: 0;
+  font-weight: 700;
+  color: var(--accent);
+}
