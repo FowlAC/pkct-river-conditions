@@ -129,4 +129,20 @@ h2{font-size:1.18rem;margin:0}.card{background:var(--panel);border:1px solid var
   object-fit: contain;
   border-radius: 14px;
 }
+.site-logo {
+  display: block;
+  width: min(320px, 70vw);
+  height: auto;
+  margin-bottom: 1rem;
+}
 
+.page-header {
+  margin-bottom: 1.75rem;
+}
+
+.page-subtitle {
+  margin: 1rem 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
