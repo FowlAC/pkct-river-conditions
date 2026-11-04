@@ -1,0 +1,30 @@
+/* PKCT v5: concise source links and mobile chart spacing. */
+.disclaimer a {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.disclaimer a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+}
+/* The SVG already has its own aspect ratio. Min-height on its wrapper
+   created a large blank strip when the SVG shrank on narrow screens. */
+@media (max-width: 600px) {
+  .trend-card .chart,
+  .velocity-trend-card .chart {
+    min-height: 0;
+    height: auto;
+  }
+  .trend-card .chart svg,
+  .velocity-trend-card .chart svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .trend-card .metric-note,
+  .velocity-trend-card .metric-note {
+    margin-top: 0.6rem;
+  }
+}
