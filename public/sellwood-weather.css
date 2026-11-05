@@ -1,0 +1,49 @@
+/* Section labels within the existing four-column measurements grid. */
+.stats > dt.measurement-section-label {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 0.4rem 0 0.15rem;
+  color: var(--text, #17212b);
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.stats > dt#local-weather-heading {
+  margin-top: 0.55rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid var(--border, #dfe7ee);
+}
+.stats > .sellwood-weather-card {
+  min-width: 0;
+}
+.stats > .sellwood-weather-card dd {
+  overflow-wrap: anywhere;
+}
+.sellwood-weather-source {
+  display: block;
+  margin-top: 0.8rem;
+  color: var(--muted, #536170);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.sellwood-weather-footer {
+  margin: 0.9rem 0 0;
+  color: var(--muted, #536170);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.sellwood-weather-footer a {
+  color: var(--accent, #1d7db5);
+}
+@media (max-width: 520px) {
+  .stats > dt.measurement-section-label {
+    font-size: 0.95rem;
+    padding-top: 0.3rem;
+  }
+  .sellwood-weather-source {
+    font-size: 0.7rem;
+  }
+}
