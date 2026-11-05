@@ -1,0 +1,23 @@
+/* PRCWeather station measurements are appended to the existing .stats grid. */
+.stats > .sellwood-weather-card {
+  min-width: 0;
+}
+.stats > .sellwood-weather-card dd {
+  overflow-wrap: anywhere;
+}
+.sellwood-weather-source {
+  display: block;
+  margin-top: 0.7rem;
+  color: var(--muted, #536170);
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+.sellwood-weather-footer {
+  margin: 0.85rem 0 0;
+  color: var(--muted, #536170);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.sellwood-weather-footer a {
+  color: var(--accent, #1d7db5);
+}
